@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <test name="Login Test">
+        <parameter name="browser" value="firefox" />
+        <parameter name="environment" value="dev"/>
+        <parameter name="username" value="testUser"/>
+        <parameter name="password" value="testPass"/>
+        <parameter name="rememberMe" value="true"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    <!-- For the negative case -->
+    <test name="Login Test Without Remember Me">
+        <parameter name="browser" value="chrome" />
+        <parameter name="environment" value="dev"/>
+        <parameter name="username" value="testUser1"/>
+        <parameter name="password" value="testPass1"/>
+        <parameter name="rememberMe" value="false"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+</suite>
